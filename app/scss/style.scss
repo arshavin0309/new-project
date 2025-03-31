@@ -4,7 +4,13 @@
 
 :root {
     --black: #000;
+    --red: #FF2F01;
+    --grey-text: #A19A99;
     --white: #fff;
+    --gradient: linear-gradient(201.99deg, rgba(255, 47, 1, 0.6) 25.16%, #000000 88.91%, rgba(255, 47, 1, 0.4) 88.91%);
+    --bg-waves-gradient: radial-gradient(49.97% 49.98% at 50% 50.13%, #ED2C00 0%, #BA2200 14%, #821800 30%, #530F00 47%, #2F0800 62%, #150300 77%, #050100 90%, #000000 100%);
+    --border-gradient: linear-gradient(149.79deg, rgba(255, 47, 1, 0.12) 2.4%, rgba(255, 47, 1, 0.42) 90.87%);
+    --gradient-opacity: linear-gradient(30.14deg, rgba(255, 47, 1, 0.24) 46.92%, rgba(0, 0, 0, 0) 137.72%, rgba(255, 47, 1, 0.16) 137.72%);
 }
 
 * {
@@ -83,6 +89,174 @@
         padding: 10px 30px;
         font-size: 14px;
     }
+}
+
+h1 {
+    font-family: Inter;
+    font-size: 60px;
+    line-height: 110%;
+    font-weight: 400;
+    letter-spacing: 0%;
+}
+
+h2 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    &.caps {
+        text-transform: uppercase;
+    }
+}
+
+h3 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    &.caps {
+        text-transform: uppercase;
+    }
+}
+
+.text {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    &.caps {
+        text-transform: uppercase;
+    }
+}
+
+.container {
+    max-width: calc(1200px + 60px);
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+section {
+    margin-top: 240px;
+    margin-bottom: 240px;
+
+    &:nth-child(1) {
+        margin-top: 0;
+    }
+}
+
+body {
+    padding-top: 126px;
+    background: var(--black);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+        height: 126px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__logo {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 100%;
+        letter-spacing: -4%;
+        color: var(--red);
+        text-decoration: none;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        padding: 0px 5px;
+        list-style: none;
+        background: var(--gradient-opacity);
+        border-radius: 15px;
+
+        &>.menu-item {
+            position: relative;
+
+            &>a {
+                display: block;
+                padding: 15px 10px;
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: var(--grey-text);
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+
+            &>.sub-menu {
+                position: absolute;
+                top: calc(100%);
+                display: grid;
+                padding: 5px 0;
+                background: var(--gradient-opacity);
+                border-radius: 0 0 15px 15px;
+                list-style: none;
+
+                &>.menu-item {
+
+                    &>a {
+                        display: block;
+                        padding: 10px 15px;
+                        color: var(--grey-text);
+                        text-decoration: none;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn {
+        padding: 15px 55px;
+        border-radius: 15px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 30px;
+    border-radius: 20px;
+    color: var(--white);
+    background: var(--red);
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @import '../scss/hovers';
