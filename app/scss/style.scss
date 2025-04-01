@@ -7,10 +7,10 @@
     --red: #FF2F01;
     --grey-text: #A19A99;
     --white: #fff;
-    --gradient: linear-gradient(201.99deg, rgba(255, 47, 1, 0.6) 25.16%, #000000 88.91%, rgba(255, 47, 1, 0.4) 88.91%);
     --bg-waves-gradient: radial-gradient(49.97% 49.98% at 50% 50.13%, #ED2C00 0%, #BA2200 14%, #821800 30%, #530F00 47%, #2F0800 62%, #150300 77%, #050100 90%, #000000 100%);
     --border-gradient: #FF2F0133;
     --gradient-opacity: linear-gradient(30.14deg, rgba(255, 47, 1, 0.24) 46.92%, rgba(0, 0, 0, 0) 137.72%, rgba(255, 47, 1, 0.16) 137.72%);
+    --gradient: linear-gradient(201.99deg, rgba(255, 47, 1, 0.6) 25.16%, #000000 88.91%, rgba(255, 47, 1, 0.4) 150%);
 }
 
 * {
@@ -335,8 +335,6 @@ body {
         padding: 40px;
         border-radius: 20px;
         background: var(--gradient);
-        background-repeat: no-repeat;
-        background-size: contain;
     }
 }
 
