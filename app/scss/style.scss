@@ -11,6 +11,8 @@
     --border-gradient: #FF2F0133;
     --gradient-opacity: linear-gradient(30.14deg, rgba(255, 47, 1, 0.24) 46.92%, rgba(0, 0, 0, 0) 137.72%, rgba(255, 47, 1, 0.16) 137.72%);
     --gradient: linear-gradient(201.99deg, rgba(255, 47, 1, 0.6) 25.16%, #000000 88.91%, rgba(255, 47, 1, 0.4) 150%);
+    --gradient-header: linear-gradient(201.99deg, #991d01 25.16%, #000000 88.91%, #991d01 150%);
+    --gradient-opacity-header: linear-gradient(30.14deg, #3d0c01 46.92%, rgba(0, 0, 0, 0) 137.72%, #3d0c01 137.72%);
     --transition: .3s ease-in-out all;
 }
 
@@ -175,7 +177,7 @@ body {
         inset: 0;
         width: 100%;
         height: 100%;
-        background: var(--gradient);
+        background: var(--gradient-header);
         opacity: 0;
         transition: var(--transition);
     }
@@ -224,7 +226,7 @@ body {
         align-items: center;
         padding: 0px 5px;
         list-style: none;
-        background: var(--gradient-opacity);
+        background: var(--gradient-opacity-header);
         border-radius: 15px;
 
         &>.menu-item {
@@ -252,10 +254,10 @@ body {
 
             &>.sub-menu {
                 position: absolute;
-                top: calc(100%);
+                top: calc(100% - 5px);
                 display: grid;
-                padding: 5px 0;
-                background: var(--gradient-opacity);
+                padding: 10px 0 5px;
+                background: var(--gradient-opacity-header);
                 border-radius: 0 0 15px 15px;
                 list-style: none;
                 transition: none;
@@ -385,13 +387,14 @@ body {
 
 .main-advantages {
     &::before {
-        z-index: -1;
+        z-index: -2;
         position: absolute;
         content: '';
         inset: 0;
         width: 100%;
         height: 100%;
-        background: url(../images/section-bg.avif) center / contain no-repeat;
+        background: url(../images/section-bg.avif) center / 100% 100% no-repeat;
+        animation: matrix 20s ease-in-out infinite;
     }
 
     &__list {
@@ -410,6 +413,9 @@ body {
         border-radius: 20px;
         background: var(--gradient);
         text-align: center;
+        
+        background-size: 150% 200%;
+        animation: gradient 3s ease-in-out infinite;
 
         &.custom {
             grid-column: span 2;
@@ -477,6 +483,9 @@ body {
         background: var(--gradient);
         border-radius: 20px;
         border: 1px solid #991c01;
+        
+        background-size: 150% 200%;
+        animation: gradient 3s ease-in-out infinite;
 
         img {
             display: block;
@@ -575,6 +584,17 @@ body {
 }
 
 .main-steps {
+    &::before {
+        z-index: -2;
+        position: absolute;
+        content: '';
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/section-bg.avif) center / 100% 100% no-repeat;
+        animation: matrix 20s ease-in-out infinite;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -639,10 +659,12 @@ body {
 
     &__arrow-bottom {
         background: url(../images/main-steps-arrow-bottom.svg) center bottom / contain no-repeat;
+        animation: swing 3s ease-in-out infinite;
     }
 
     &__arrow-top {
         background: url(../images/main-steps-arrow-top.svg) center top / contain no-repeat;
+        animation: swing 3s ease-in-out infinite;
     }
 }
 
@@ -661,11 +683,14 @@ body {
     table {
         width: 100%;
         table-layout: fixed;
-        background: var(--gradient);
         border-radius: 20px;
         border: 1px solid #FFFFFF33;
         border-collapse: collapse;
         overflow: clip;
+        background: var(--gradient);
+
+        background-size: 150% 200%;
+        animation: gradient 3s ease-in-out infinite;
 
         th {
             padding: 60px 40px 40px;
@@ -771,6 +796,8 @@ body {
         padding: 40px;
         border-radius: 20px;
         background: var(--gradient);
+        background-size: 150% 200%;
+        animation: gradient 3s ease-in-out infinite;
     }
 
     &__author {
@@ -789,6 +816,8 @@ body {
         padding: 40px 100px;
         border-radius: 20px;
         background: var(--gradient);
+        background-size: 150% 200%;
+        animation: gradient 3s ease-in-out infinite;
     }
 
     &__box {
@@ -821,6 +850,8 @@ body {
         padding: 110px 100px;
         border-radius: 20px;
         background: var(--gradient);
+        background-size: 150% 200%;
+        animation: gradient 3s ease-in-out infinite;
 
         &::before {
             z-index: -1;
