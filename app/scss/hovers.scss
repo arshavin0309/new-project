@@ -7,7 +7,69 @@
 
     .btn {
         &:hover {
-            transform: scale(0.9);
+            transform: scale(0.95);
+        }
+    }
+
+    .header {
+        .menu {
+            &>.menu-item {
+                &>.sub-menu {
+                    &>.menu-item {
+                        &>a {
+                            &:hover {
+                                background: #991d01;
+                                color: var(--white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-form {
+        a {
+            &:hover {
+                color: var(--red);
+            }
+        }
+    }
+
+    input {
+        &[type="submit"] {
+            &:hover {
+                transform: scale(0.95);
+            }
+        }
+    }
+
+    .footer {
+        .menu {
+            &>.menu-item {
+                &>a {
+                    &:hover {
+                        cursor: initial;
+                    }
+                }
+                &>.sub-menu {
+                    &>.menu-item {
+                        &>a {
+                            &:hover {
+                                color: var(--red);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__contacts {
+            a {
+                &:hover {
+                    color: var(--red);
+                }
+            }
         }
     }
 }
