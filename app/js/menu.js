@@ -66,12 +66,14 @@ function navMenu() {
                         }
                     }
 
+                    headerMenu.addClass('active');
                     subMenu.eq(hover).addClass('active').slideDown();
                     menuItem.eq(hover).addClass('active');
                 }
             })
 
             subMenu.eq(hover).on('mouseleave', function () {
+                headerMenu.removeClass('active');
                 subMenu.eq(hover).removeClass('active').slideUp();
                 menuItem.eq(hover).removeClass('active');
             })

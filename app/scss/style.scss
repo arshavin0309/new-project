@@ -96,6 +96,7 @@
 
 h1,
 .h1 {
+    margin: 0;
     font-family: Inter;
     font-size: 60px;
     line-height: 110%;
@@ -106,6 +107,7 @@ h1,
 
 h2,
 .h2 {
+    margin: 0;
     font-family: Inter;
     font-weight: 400;
     font-size: 30px;
@@ -115,6 +117,7 @@ h2,
 }
 
 h3 {
+    margin: 0;
     font-family: Inter;
     font-weight: 700;
     font-size: 24px;
@@ -229,6 +232,10 @@ body {
         list-style: none;
         background: var(--gradient-opacity-header);
         border-radius: 15px;
+
+        &.active {
+            border-radius: 15px;
+        }
 
         &>.menu-item {
             position: relative;
@@ -448,6 +455,9 @@ body {
 
         img {
             margin-bottom: 20px;
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
         }
 
         p {
@@ -1094,6 +1104,115 @@ body {
     .copyright {
         margin-top: 25px;
         text-align: center;
+    }
+}
+
+.platform-hero {
+    &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/main-hero-bg.avif) center / contain no-repeat;
+        animation: rotate3d 6s ease-in-out infinite;
+    }
+
+    .container {
+        text-align: center;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    &__box {
+        display: grid;
+        gap: 20px;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    h1 {
+        max-width: 650px;
+    }
+}
+
+.platform-advantages {
+    &::before {
+        z-index: -2;
+        position: absolute;
+        content: '';
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/section-bg.avif) center / 100% 100% no-repeat;
+        animation: matrix 20s ease-in-out infinite;
+    }
+
+    &__list {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: end;
+        align-items: center;
+        padding: 40px;
+        border-radius: 20px;
+        background: var(--gradient);
+        text-align: center;
+        
+        background-size: 150% 200%;
+        animation: gradient 3s ease-in-out infinite;
+
+        &.custom {
+            grid-column: span 2;
+            align-items: start;
+            text-align: left;
+
+            p {
+                &.caps {
+                    margin: 0;
+                }
+            }
+        }
+
+        img {
+            margin-bottom: 20px;
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        p {
+            &.caps {
+                margin: 0px -25px;
+                color: var(--white);
+
+                &+p {
+                    min-height: 65px;
+                }
+            }
+        }
+    }
+}
+
+.platform-device {
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+
+        p {
+            max-width: 790px;
+            color: var(--white);
+        }
     }
 }
 
