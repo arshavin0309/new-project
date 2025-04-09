@@ -1,142 +1,73 @@
-// Установка title
-// Если заголовка нет, он будет установлен
-// !!! ДЛЯ CMS НЕ ПОНАДОБИТЬСЯ (начало)
-
+// Если title нет, он будет установлен
+let page = document.location.pathname;
 let lang = document.documentElement.lang;
-let title;
 
-if (!document.title) {
-    switch (document.location.pathname) {
-        case '/':
-            title = lang == 'ru' ? 'Главная' : 'Main';
-            document.title = title;
-            break;
+function createTitle() {
 
-        case '/start.html':
-            title = lang == 'ru' ? 'С чего начать?' : 'Where to start?';
-            document.title = title;
-            break;
+    if (!document.title) {
 
-        case '/404.html':
-            title = lang == 'ru' ? 'Страница не найдена?' : 'Page not found';
-            document.title = title;
-            break;
+        if (lang == 'ru') { // страница на русском
 
-        case '/terms.html':
-        case '/terms-of-trade.html':
-            title = lang == 'ru' ? 'Условия торговли' : 'Trading terms';
-            document.title = title;
-            break;
+            if (page === '/') { document.title = 'Главная' };
+            if (page === '/start.html') { document.title = 'С чего начать?' };
+            if (page === '/404.html') { document.title = 'Страница не найдена' };
+            if (page === '/terms.html') { document.title = 'Условия торговли' };
+            if (page === '/terms-of-trade.html') { document.title = 'Условия торговли' };
+            if (page === '/platform.html') { document.title = 'Торговая платформа' };
+            if (page === '/strategies.html') { document.title = 'Торговые стратегии' };
+            if (page === '/schedule.html') { document.title = 'Часы работы рынка' };
+            if (page === '/analytics.html') { document.title = 'Аналитика рынка' };
+            if (page === '/review.html') { document.title = 'Обзор рынка' };
+            if (page === '/overview.html') { document.title = 'Обзор рынка' };
+            if (page === '/condition.html') { document.title = 'Состояние рынка' };
+            if (page === '/calendar.html') { document.title = 'Экономический календарь' };
+            if (page === '/news.html') { document.title = 'Новости рынка' };
+            if (page === '/forecasts.html') { document.title = 'Прогнозы рынка' };
+            if (page === '/currencies.html') { document.title = 'Валюты' };
+            if (page === '/cryptocurrencies.html') { document.title = 'Криптовалюты' };
+            if (page === '/stocks.html') { document.title = 'Акции' };
+            if (page === '/indices.html') { document.title = 'Индексы' };
+            if (page === '/raw-materials.html' ||
+                page === '/commodities.html') { document.title = 'Сырье' };
+            if (page === '/history.html') { document.title = 'История компании' };
+            if (page === '/why.html') { document.title = 'Почему мы?' };
+            if (page === '/documents.html') { document.title = 'Документы' };
+            if (page === '/about.html') { document.title = 'О нас' };
+            if (page === '/contacts.html') { document.title = 'Контакты' };
+            if (page === '/instruments.html') { document.title = 'Торговые инструменты' };
 
-        case '/platform.html':
-            title = lang == 'ru' ? 'Торговая платформа' : 'Trading platform';
-            document.title = title;
-            break;
+        } else { // страница на других языках
 
-        case '/strategies.html':
-            title = lang == 'ru' ? 'Торговые стратегии' : 'Trading strategies';
-            document.title = title;
-            break;
+            if (page === '/') { document.title = 'Main page' };
+            if (page === '/start.html') { document.title = 'Where to start?' };
+            if (page === '/404.html') { document.title = 'Page not found' };
+            if (page === '/terms.html') { document.title = 'Trading terms' };
+            if (page === '/terms-of-trade.html') { document.title = 'Trading terms' };
+            if (page === '/platform.html') { document.title = 'Trading platform' };
+            if (page === '/strategies.html') { document.title = 'Trading strategies' };
+            if (page === '/schedule.html') { document.title = 'Market hours' };
+            if (page === '/analytics.html') { document.title = 'Market analytics' };
+            if (page === '/review.html') { document.title = 'Market overview' };
+            if (page === '/overview.html') { document.title = 'Market overview' };
+            if (page === '/condition.html') { document.title = 'State of the market' };
+            if (page === '/calendar.html') { document.title = 'Economic calendar' };
+            if (page === '/news.html') { document.title = 'Market news' };
+            if (page === '/forecasts.html') { document.title = 'Market forecasts' };
+            if (page === '/currencies.html') { document.title = 'Currencies' };
+            if (page === '/cryptocurrencies.html') { document.title = 'Cryptocurrencies' };
+            if (page === '/stocks.html') { document.title = 'Stocks' };
+            if (page === '/indices.html') { document.title = 'Indices' };
+            if (page === '/raw-materials.html' ||
+                page === '/commodities.html') { document.title = 'Сommodities' };
+            if (page === '/history.html') { document.title = 'Company history' };
+            if (page === '/why.html') { document.title = 'Why us?' };
+            if (page === '/documents.html') { document.title = 'Documents' };
+            if (page === '/about.html') { document.title = 'About us' };
+            if (page === '/contacts.html') { document.title = 'Contacts' };
+            if (page === '/instruments.html') { document.title = 'Trading instruments' };
 
-        case '/schedule.html':
-            title = lang == 'ru' ? 'Часы работы рынка' : 'Market hours';
-            document.title = title;
-            break;
-
-        case '/instruments.html':
-            title = lang == 'ru' ? 'Торговые инструменты' : 'Trading instruments';
-            document.title = title;
-            break;
-
-        case '/analytics.html':
-            title = lang == 'ru' ? 'Аналитика рынка' : 'Market analytics';
-            document.title = title;
-            break;
-
-        case '/review.html':
-        case '/overview.html':
-            title = lang == 'ru' ? 'Обзор рынка' : 'Market overview';
-            document.title = title;
-            break;
-
-        case '/raw-materials.html':
-        case '/commodities.html':
-            title = lang == 'ru' ? 'Сырье' : 'Сommodities';
-            document.title = title;
-            break;
-
-        case '/condition.html':
-            title = lang == 'ru' ? 'Состояние рынка' : 'State of the market';
-            document.title = title;
-            break;
-
-        case '/calendar.html':
-            title = lang == 'ru' ? 'Экономический календарь' : 'Economic calendar';
-            document.title = title;
-            break;
-
-        case '/news.html':
-            title = lang == 'ru' ? 'Новости рынка' : 'Market news';
-            document.title = title;
-            break;
-
-        case '/forecasts.html':
-            title = lang == 'ru' ? 'Прогнозы рынка' : 'Market forecasts';
-            document.title = title;
-            break;
-
-        case '/currencies.html':
-            title = lang == 'ru' ? 'Валюты' : 'Currencies';
-            document.title = title;
-            break;
-
-        case '/cryptocurrencies.html':
-            title = lang == 'ru' ? 'Криптовалюты' : 'Cryptocurrencies';
-            document.title = title;
-            break;
-
-        case '/stocks.html':
-            title = lang == 'ru' ? 'Акции' : 'Stocks';
-            document.title = title;
-            break;
-
-        case '/ies.html':
-            title = lang == 'ru' ? 'Индексы' : 'Indices';
-            document.title = title;
-            break;
-
-        case '/history.html':
-            title = lang == 'ru' ? 'История компании' : 'Company history';
-            document.title = title;
-            break;
-
-        case '/why.html':
-            title = lang == 'ru' ? 'Почему мы?' : 'Why us?';
-            document.title = title;
-            break;
-
-        case '/documents.html':
-            title = lang == 'ru' ? 'Документы' : 'Documents';
-            document.title = title;
-            break;
-
-        case '/about.html':
-            title = lang == 'ru' ? 'О нас' : 'About us';
-            document.title = title;
-            break;
-
-        case '/contacts.html':
-            title = lang == 'ru' ? 'Контакты' : 'Contacts';
-            document.title = title;
-            break;
-
-        case '/tips.html':
-            title = lang == 'ru' ? 'Торговые советы' : 'Trading tips';
-            document.title = title;
-            break;
-
-        default:
-            document.title = 'Нужно установить title';
-            break;
+        }
     }
 }
+
+createTitle();
