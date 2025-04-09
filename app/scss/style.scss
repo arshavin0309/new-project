@@ -411,7 +411,7 @@ body {
     }
 }
 
-.main-hero {
+.hero {
     &::before {
         z-index: -1;
         content: '';
@@ -1404,6 +1404,145 @@ table {
         height: 100%;
         background: url(../images/section-bg.avif) center / 100% 100% no-repeat;
         animation: matrix 20s ease-in-out infinite;
+    }
+}
+
+.instruments-strategy {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+    }
+
+    &__item {
+        min-height: 450px;
+        display: grid;
+        gap: 40px;
+        padding: 40px;
+        grid-column: span 2;
+        border-radius: 20px;
+        background: var(--gradient);
+        background-size: 150% 200%;
+        animation: gradient 3s ease-in-out infinite;
+
+        &:nth-child(4) {
+            grid-column: 2/4;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 20px;
+        color: var(--white);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+.widget-box {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--gradient);
+    background-size: 150% 200%;
+    animation: gradient 3s ease-in-out infinite;
+
+    table {
+        border: initial;
+        border-radius: 0;
+        background: none;
+    }
+
+    &--decor {
+        position: relative;
+        width: auto;
+        padding: 60px 20px 20px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 24px;
+            left: 44px;
+            width: 52px;
+            height: 12px;
+            background: url(../images/widget-box-left.svg) center / contain no-repeat;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 20px;
+            right: 44px;
+            width: 60px;
+            height: 20px;
+            background: url(../images/widget-box-right.svg) center / contain no-repeat;
+        }
+    }
+}
+
+.overview-monitoring {
+    .container {
+        gap: 40px;
+    }
+
+    .heading {
+        margin-bottom: -20px;
+
+        &+p {
+            max-width: 445px;
+            text-align: center;
+        }
+    }
+}
+
+.overview-quotes {
+    .container {
+        gap: 40px;
+    }
+
+    .widget-box {
+        width: 100%;
+    }
+
+    .heading {
+        margin-bottom: -20px;
+
+        &+p {
+            max-width: 445px;
+            text-align: center;
+        }
+    }
+}
+
+.overview-leaders {
+    .container {
+        gap: 40px;
+    }
+
+    .heading {
+        margin-bottom: -20px;
+    }
+}
+
+.overview-charts {
+    .container {
+        gap: 40px;
+    }
+
+    .widget-box {
+        width: 100%;
+    }
+
+    .heading {
+        margin-bottom: -20px;
+
+        &+p {
+            max-width: 445px;
+            text-align: center;
+        }
     }
 }
 
