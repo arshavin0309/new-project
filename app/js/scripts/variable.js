@@ -52,6 +52,9 @@ if (page == '/404.html') {
     $('.hero__title').html('Oops! Page not found (404)');
     $('.hero__info').css('display', 'none');
     $('.hero__btn span').html('Return to the homepage');
+
+    $('.error .main-form .heading .h1').css('display', 'none');
+    $('.error .main-form .heading h2').html('Contact our 24/7 support team if you need assistance');
 }
 
 if (page == '/overview.html') {
@@ -92,4 +95,10 @@ if (page == '/about.html') {
     $('.hero__info').css('display', 'none');
     $('.hero__btn').css('display', 'none');
     $('.terms-steps .heading .h1').html('04');
+    $('.about .main-form .heading').css('display', 'none');
+}
+
+if (page == '/contacts.html') {
+    $('.contacts .main-form .heading .h1').html('01');
+    $('.contacts .main-form .heading h2').html('Feel free to message us anytime');
 }

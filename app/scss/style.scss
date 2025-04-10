@@ -1823,16 +1823,16 @@ table {
     }
 }
 
-.error-title {
-    margin-bottom: -140px;
+.error {
+    .main-form {
+        .heading {
+            width: 100%;
 
-    h2 {
-        width: 100%;
-        padding: 15px 100px;
-        border-radius: 15px;
-        background: var(--gradient-opacity);
-        text-transform: uppercase;
-        text-align: center;
+            h2 {
+                width: 100%;
+                text-align: center;
+            }
+        }
     }
 }
 
