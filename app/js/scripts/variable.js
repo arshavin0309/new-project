@@ -61,3 +61,35 @@ if (page == '/overview.html') {
     $('.hero__btn span').html('Open an Account');
     $('.main-form .heading .h1').html('05');
 }
+
+if (page == '/analytics.html') {
+    $('.hero__heading').html('Market analytics');
+    $('.hero__title').html('VertexTrade – your source of reliable market insights');
+    $('.hero__info').html('Stay ahead of the market with VertexTrade’s objective analysis, forecasts, and key financial data. Gain the confidence to make well-informed trading decisions.');
+    $('.hero__btn span').html('Start Trading');
+
+    $('.terms-steps .heading .h1').html('03');
+    $('.main-form .heading .h1').html('04');
+}
+
+if (page == '/news.html') {
+    $('.hero__heading').html('Market news');
+    $('.hero__title').html('Get Real-Time Market Updates');
+    $('.hero__info').html('Stay informed about the latest financial trends and breaking news to make well-founded trading decisions. Keep a competitive edge with up-to-date market insights.');
+    $('.hero__btn span').html('Start Trading');
+}
+
+if (page == '/forecasts.html') {
+    $('.hero__heading').html('Market forecasts');
+    $('.hero__title').html('Find the best trading opportunities');
+    $('.hero__info').html('Stay ahead of the game with regular updates on currency markets, commodities and other assets.');
+    $('.hero__btn span').html('Start Trading');
+}
+
+if (page == '/about.html') {
+    $('.hero__heading').html('About VertexTrade');
+    $('.hero__title').html('Your Trusted Trading Partner');
+    $('.hero__info').css('display', 'none');
+    $('.hero__btn').css('display', 'none');
+    $('.terms-steps .heading .h1').html('04');
+}

@@ -72,4 +72,20 @@
             }
         }
     }
+
+    .analytics-basics {
+        &__list {
+            li {
+                &:hover {
+                    p {
+                        color: var(--white);
+                    }
+
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 }
