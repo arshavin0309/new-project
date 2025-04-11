@@ -43,3 +43,13 @@ document.querySelector('.cookies .btn').addEventListener('click', () => {
     document.querySelector('.cookies').style = 'display: none'
     setCookie('cookies', 'true', { 'max-age': 3600 * 24 * 365 })
 })
+
+let lang = document.documentElement.lang;
+
+if (lang == 'ru' || lang == 'ru_RU' || lang == 'ru-RU') {
+    $('.cookies__info').html('Мы используем файлы cookie, чтобы больше узнать о том, как вы пользуетесь нашим сайтом, и что мы можем улучшить.');
+    $('.cookies .btn').html('Принять');
+} else {
+    $('.cookies__info').html('We use cookies to learn more about how you use our website and what we can improve.');
+    $('.cookies .btn').html('Accept');
+}

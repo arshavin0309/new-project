@@ -3,6 +3,12 @@ let swiper1 = new Swiper(".swiper1", {
     spaceBetween: 20,
     slidesPerView: 4,
 
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+
     pagination: {
         el: ".swiper1-pagination",
     },
@@ -13,7 +19,9 @@ let swiper2 = new Swiper(".swiper2", {
     spaceBetween: 20,
     slidesPerView: 4,
 
-    pagination: {
-        el: ".swiper2-pagination",
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
     },
 });

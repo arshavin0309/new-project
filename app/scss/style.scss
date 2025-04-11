@@ -18,11 +18,11 @@
 
 //отключение всех анимаций
 * {
-    animation: none !important;
+    //animation: none !important;
 
     &::before,
     &::after {
-        animation: none !important;
+        //animation: none !important;
     }
 }
 
@@ -87,10 +87,11 @@
     background: #333333;
     padding: 25px;
     border-radius: 5px;
-    color: var(--white);
+    background: #3d0b00;
 
     p {
         font-size: 16px;
+        color: var(--white);
     }
 
     a {
@@ -111,7 +112,6 @@ h1,
     font-size: 60px;
     line-height: 110%;
     font-weight: 400;
-    letter-spacing: 0%;
     color: var(--white);
 }
 
@@ -122,7 +122,6 @@ h2,
     font-weight: 400;
     font-size: 30px;
     line-height: 100%;
-    letter-spacing: 0%;
     color: var(--white);
 }
 
@@ -133,7 +132,6 @@ h3,
     font-weight: 400;
     font-size: 24px;
     line-height: 100%;
-    letter-spacing: 0%;
     color: var(--white);
 }
 
@@ -143,7 +141,6 @@ p {
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0%;
     color: var(--grey-text);
 }
 
@@ -162,6 +159,10 @@ section {
     position: relative;
     margin-top: 240px;
     margin-bottom: 240px;
+
+    &:first-child {
+        margin-top: 260px;
+    }
 
     .container {
         display: flex;
@@ -327,6 +328,7 @@ body {
     text-decoration: none;
     border-radius: 20px;
     text-align: center;
+    border: none;
     cursor: pointer;
 
     &--center {
@@ -428,9 +430,10 @@ body {
     }
 
     .container {
-        text-align: center;
+        min-height: 560px;
         padding-top: 35px;
         padding-bottom: 35px;
+        text-align: center;
     }
 }
 
@@ -445,6 +448,14 @@ body {
         border-radius: 15px;
         background: var(--gradient-opacity);
         text-transform: uppercase;
+    }
+}
+
+.main {
+    .hero {
+        h1 {
+            max-width: 760px;
+        }
     }
 }
 
@@ -536,7 +547,7 @@ body {
 
         &:nth-child(2) {
             p {
-                max-width: 310px;
+                max-width: 300px;
             }
         }
     }
@@ -906,6 +917,7 @@ table {
         background: var(--gradient);
         background-size: 160% 150%;
         animation: gradient 3s ease-in-out infinite;
+        overflow: clip;
 
         &::before {
             z-index: -1;
@@ -916,6 +928,7 @@ table {
             height: 100%;
             border-radius: 20px;
             background: url(../images/swiper1-bg.avif) center top 150px / cover no-repeat;
+            animation: matrix 20s ease-in-out infinite;
         }
     }
 
@@ -1149,6 +1162,14 @@ table {
     .copyright {
         margin-top: 25px;
         text-align: center;
+    }
+}
+
+.platform {
+    .hero {
+        h1 {
+            max-width: 680px;
+        }
     }
 }
 
@@ -1399,6 +1420,22 @@ table {
     }
 }
 
+.terms {
+    .main-plans {
+        &::before {
+            z-index: -2;
+            position: absolute;
+            content: "";
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../images/section-bg.avif) center / 100% 100% no-repeat;
+            -webkit-animation: matrix 20s ease-in-out infinite;
+            animation: matrix 20s ease-in-out infinite;
+        }
+    }
+}
+
 .terms-hero {
     &::before {
         z-index: -1;
@@ -1431,7 +1468,27 @@ table {
     }
 }
 
+.instruments {
+    .hero {
+        h1 {
+            max-width: 750px;
+        }
+    }
+}
+
 .instruments-strategy {
+    &::before {
+        z-index: -2;
+        position: absolute;
+        content: "";
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/section-bg.avif) center / 100% 100% no-repeat;
+        -webkit-animation: matrix 20s ease-in-out infinite;
+        animation: matrix 20s ease-in-out infinite;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -1463,6 +1520,23 @@ table {
         color: var(--white);
         font-weight: 700;
         text-transform: uppercase;
+    }
+
+    ul {
+        display: grid;
+        gap: 5px;
+        list-style: none;
+
+        li {
+            padding: 5px 10px;
+            color: var(--white);
+            font-size: 12px;
+            line-height: 100%;
+            font-weight: 400;
+            font-family: Inter;
+            background: var(--gradient-opacity);
+            border-radius: 20px;
+        }
     }
 }
 
@@ -1503,6 +1577,18 @@ table {
             width: 60px;
             height: 20px;
             background: url(../images/widget-box-right.svg) center / contain no-repeat;
+        }
+    }
+}
+
+.overview {
+    .hero {
+        h1 {
+            max-width: 915px;
+        }
+
+        &__info {
+            max-width: 510px;
         }
     }
 }
@@ -1664,6 +1750,8 @@ table {
                 transform: translateY(-50%);
                 background: url(../images/accordion-arrow.svg) center / contain no-repeat;
                 transition: var(--transition);
+                box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, .2);
+                border-radius: 50px;
             }
 
             &.active {
@@ -1738,13 +1826,34 @@ table {
 
 .forecasts {
     .hero {
+        .container {
+            padding-top: 115px;
+        }
+
         &__title {
             margin-top: -80px;
+        }
+
+        &__info {
+            max-width: 700px;
         }
     }
 
     .widget-box {
         width: 100%;
+    }
+}
+
+.about {
+    .hero {
+        .container {
+            padding-top: 100px;
+            margin-bottom: -180px;
+        }
+
+        &__title {
+            max-width: 500px;
+        }
     }
 }
 
@@ -1824,6 +1933,12 @@ table {
 }
 
 .error {
+    .hero {
+        .container {
+            padding-top: 100px;
+        }
+    }
+
     .main-form {
         .heading {
             width: 100%;
@@ -1838,7 +1953,12 @@ table {
 
 .contacts {
     .hero {
+        &::before {
+            background-position: center top;
+        }
+
         .container {
+            padding-top: 95px;
             gap: 20px;
         }
 
@@ -1856,6 +1976,18 @@ table {
 
         img {
             border-radius: 10px;
+        }
+    }
+}
+
+.calendar {
+    .hero {
+        h1 {
+            max-width: 750px;
+        }
+
+        &__info {
+            max-width: 760px;
         }
     }
 }

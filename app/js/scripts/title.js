@@ -1,6 +1,5 @@
 // Если title нет, он будет установлен
 let page = document.location.pathname;
-let lang = document.documentElement.lang;
 
 function createTitle() {
 

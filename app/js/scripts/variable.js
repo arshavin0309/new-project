@@ -86,6 +86,9 @@ if (page == '/news.html') {
     $('.hero__info').html('Stay informed about the latest financial trends and breaking news to make well-founded trading decisions. Keep a competitive edge with up-to-date market insights.');
     $('.hero__btn span').html('Start Trading');
     $('.hero__box').css('display', 'none');
+    $('.banner-1 h2').html('reach your maximum potential with vertextrade');
+    $('.banner-1 h2 + p').html('VertexTrade – your analytics, your strategy, your success. Start trading with confidence today!');
+
 }
 
 if (page == '/forecasts.html') {
@@ -94,6 +97,8 @@ if (page == '/forecasts.html') {
     $('.hero__info').html('Stay ahead of the game with regular updates on currency markets, commodities and other assets.');
     $('.hero__btn span').html('Start Trading');
     $('.hero__box').css('display', 'none');
+    $('.banner-1 h2').html('Trade with Confidence, Trade with VertexTrade');
+    $('.banner-1 h2 + p').html('Your strategy, your success—gain the insights you need to stay ahead!');
 }
 
 if (page == '/about.html') {
@@ -104,6 +109,9 @@ if (page == '/about.html') {
     $('.hero__box').css('display', 'none');
     $('.terms-steps .heading .h1').html('04');
     $('.about .main-form .heading').css('display', 'none');
+    $('.banner-1 h2').html('Ready to trade?<br>Click below to jump back into the action!');
+    $('.banner-1 h2 + p').css('display', 'none');
+    $('.banner-1 .btn span').html('START TRADING TODAY');
 }
 
 if (page == '/contacts.html') {
@@ -113,4 +121,7 @@ if (page == '/contacts.html') {
     $('.hero__btn').css('display', 'none');
     $('.contacts .main-form .heading .h1').html('01');
     $('.contacts .main-form .heading h2').html('Feel free to message us anytime');
+    $('.banner-1 h2').html('Ready to trade?<br>Click below to jump back into the action!');
+    $('.banner-1 h2 + p').css('display', 'none');
+    $('.banner-1 .btn span').html('START TRADING TODAY');
 }
