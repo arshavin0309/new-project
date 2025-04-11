@@ -172,7 +172,7 @@ section {
 }
 
 body {
-    padding-top: 126px;
+    //padding-top: 126px;
     background: var(--black);
     color: var(--grey-text);
     overflow-x: hidden;
@@ -1832,6 +1832,30 @@ table {
                 width: 100%;
                 text-align: center;
             }
+        }
+    }
+}
+
+.contacts {
+    .hero {
+        .container {
+            gap: 20px;
+        }
+
+        &__title {
+            max-width: 495px;
+        }
+
+        &__box {
+            padding: 20px;
+            border-radius: 20px;
+            background: var(--gradient);
+            background-size: 160% 150%;
+            animation: gradient 3s ease-in-out infinite;
+        }
+
+        img {
+            border-radius: 10px;
         }
     }
 }
