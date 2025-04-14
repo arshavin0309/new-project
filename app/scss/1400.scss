@@ -1,3 +1,11 @@
 @media (max-width: 1400px) {
-    
+    .footer {
+        &__nav {
+            gap: 40px;
+        }
+
+        .menu {
+            gap: 40px;
+        }
+    }
 }

@@ -1,3 +1,123 @@
 @media (max-width: 1200px) {
-    
+    .header {
+        &__burger {
+            display: block;
+        }
+
+        &.active {
+            &::before {
+                opacity: 1;
+                background: #991d01;
+            }
+        }
+
+        &__nav {
+            position: fixed;
+            inset: 76px 0 0 auto;
+            width: 100%;
+            max-width: 400px;
+            height: calc(100vh - 76px);
+            flex-direction: column;
+            background: var(--gradient-header);
+            transform: translateX(100%);
+
+            &.active {
+                transform: none;
+            }
+        }
+
+        .menu {
+            width: 100%;
+            flex-direction: column;
+            padding: 0;
+            border-radius: 0;
+            background: none;
+
+            &>.menu-item {
+                width: 100%;
+
+                &:first-child {
+                    &>a {
+                        border-top: 1px solid var(--grey-text);
+                    }
+                }
+
+                &>a {
+                    width: 100%;
+                    padding: 20px 30px;
+                    color: var(--white);
+                    text-align: left;
+                    border-bottom: 1px solid var(--grey-text);
+                }
+
+                &>.sub-menu {
+                    position: initial;
+                    padding: 15px 0;
+                    border-radius: 0;
+                    border-bottom: 1px solid var(--grey-text);
+                    opacity: 1;
+
+                    &>.menu-item {
+                        &>a {
+                            padding: 20px 30px 20px 50px;
+                            color: var(--white);
+                        }
+                    }
+                }
+            }
+        }
+
+        .container {
+            height: 76px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+
+    section {
+        margin-top: 150px;
+        margin-bottom: 150px;
+
+        &:first-child {
+            margin-top: 150px;
+        }
+
+        .container {
+            gap: 40px;
+        }
+    }
+
+    h1,
+    .h1 {
+        font-size: 40px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 25px;
+    }
+
+    .hero {
+        .container {
+            min-height: auto;
+        }
+    }
+
+    .analytics {
+        .hero__title {
+            margin: 0;
+        }
+    }
+
+    .news {
+        .hero__title {
+            margin: 0;
+        }
+    }
+
+    .forecasts {
+        .hero__title {
+            margin: 0;
+        }
+    }
 }
