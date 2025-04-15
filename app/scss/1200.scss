@@ -120,4 +120,22 @@
             margin: 0;
         }
     }
+
+    .main-advantages {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__item {
+            min-height: 300px;
+
+            &.custom {
+                grid-column: span 3;
+            }
+
+            &:nth-child(4) {
+                grid-row: 1;
+            }
+        }
+    }
 }

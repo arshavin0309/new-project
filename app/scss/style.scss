@@ -18,11 +18,11 @@
 
 //отключение всех анимаций
 * {
-    //animation: none !important;
+    animation: none !important;
 
     &::before,
     &::after {
-        //animation: none !important;
+        animation: none !important;
     }
 }
 
@@ -181,7 +181,7 @@ html {
 }
 
 body {
-    //padding-top: 126px;
+    min-width: 390px;
     background: var(--black);
     color: var(--grey-text);
     overflow-x: hidden;

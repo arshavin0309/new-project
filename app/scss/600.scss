@@ -1,3 +1,13 @@
 @media (max-width: 600px) {
-    
+    .main-advantages {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            &.custom {
+                grid-column: initial;
+            }
+        }
+    }
 }
