@@ -1254,10 +1254,12 @@ table {
     }
 
     &__item {
+        width: 285px;
+        height: initial;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        justify-content: end;
+        justify-content: start;
         align-items: center;
         padding: 40px;
         border-radius: 20px;
@@ -2024,6 +2026,30 @@ table {
 
         &__info {
             max-width: 760px;
+        }
+    }
+}
+
+.swiper-platform {
+    width: 100%;
+
+    &__pagination {
+        width: auto;
+        display: none;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+
+        .swiper-pagination-bullet {
+            width: 30px;
+            height: 3px;
+            margin: 0 !important;
+            background: var(--grey-text);
+            border-radius: 0;
+
+            &_active {
+                background: var(--white);
+            }
         }
     }
 }
