@@ -10,4 +10,34 @@
             }
         }
     }
+
+    .main-form {
+        &__container {
+            padding: 20px;
+        }
+    }
+
+    .banner-1 {
+        &__container {
+            grid-template-columns: 1fr;
+            padding: 20px;
+        }
+
+        picture {
+            max-width: 320px;
+            margin: auto;
+        }
+    }
+
+    .btn {
+        &--arrow {
+            grid-template-columns: 1fr 50px;
+
+            span {
+                height: 50px;
+                align-items: center;
+                padding: 20px;
+            }
+        }
+    }
 }

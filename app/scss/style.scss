@@ -1042,7 +1042,7 @@ table {
             }
 
             &[type="submit"] {
-                width: calc(100% - 96px);
+                width: 100%;
                 height: auto;
                 margin-top: 20px;
                 padding: 30px;
@@ -1076,18 +1076,6 @@ table {
 .form-submit {
     position: relative;
     width: 100%;
-
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 76px;
-        height: 76px;
-        display: block;
-        background: url(../images/arrow-btn.svg) center / contain no-repeat;
-        border-radius: 50%;
-    }
 }
 
 .footer {

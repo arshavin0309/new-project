@@ -16,7 +16,7 @@
             inset: 76px 0 0 auto;
             width: 100%;
             max-width: 400px;
-            height: calc(100vh - 76px);
+            height: calc(100% - 76px);
             flex-direction: column;
             background: var(--gradient-header);
             transform: translateX(100%);
@@ -136,6 +136,69 @@
             &:nth-child(4) {
                 grid-row: 1;
             }
+        }
+    }
+
+    .table-border {
+        width: 100%;
+    }
+
+    .table-black {
+        overflow: clip;
+    }
+
+    table {
+        min-width: 940px;
+        width: 940px;
+
+        th {
+            padding: 30px 20px 20px;
+
+            .btn {
+                padding: 20px;
+            }
+        }
+
+        td {
+            padding: 20px;
+        }
+    }
+
+    .table-overflow {
+        overflow: auto;
+    }
+
+    .footer {
+        &__info {
+            gap: 50px;
+        }
+
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        &__nav {
+            gap: 50px;
+        }
+
+        .menu {
+            gap: 50px;
+        }
+    }
+
+    .main-form {
+        &__container {
+            padding: 50px;
+            gap: 50px;
+        }
+    }
+
+    .banner-1 {
+        &__container {
+            padding: 40px;
+            gap: 40px;
         }
     }
 }

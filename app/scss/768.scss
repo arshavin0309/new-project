@@ -1,9 +1,10 @@
 @media (max-width: 768px) {
+
     h1,
     .h1 {
         font-size: 25px;
     }
-    
+
     h2,
     .h2 {
         font-size: 20px;
@@ -23,6 +24,64 @@
                 height: 50px;
                 padding: 15px;
             }
+        }
+    }
+
+    .main-steps {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            width: 280px;
+            height: 280px;
+
+            &:nth-child(1) {
+                &::before {
+                    top: 40px;
+                }
+            }
+
+            &:nth-child(3) {
+                &::before {
+                    bottom: 40px;
+                }
+            }
+
+            &:nth-child(5) {
+                &::before {
+                    top: 40px;
+                }
+            }
+        }
+
+        &__arrow-bottom {
+            height: 100px;
+            background-image: url(../images/main-steps-arrow-bottom-rotate.svg);
+            background-position: left center;
+        }
+
+        &__arrow-top {
+            height: 100px;
+            background-image: url(../images/main-steps-arrow-top-rotate.svg);
+            background-position: right center;
+        }
+    }
+
+    .main-form {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .banner-1 {
+        &__container {
+            grid-template-columns: 2fr 1fr;
+            align-items: start;
+        }
+
+        &__box {
+            gap: 30px;
         }
     }
 }
