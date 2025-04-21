@@ -8,4 +8,29 @@
             text-align: left;
         }
     }
+
+    .main-steps {
+        &__item {
+            width: 200px;
+            height: 200px;
+
+            &:nth-child(1) {
+                &::before {
+                    top: 0;
+                }
+            }
+
+            &:nth-child(3) {
+                &::before {
+                    bottom: 0;
+                }
+            }
+
+            &:nth-child(5) {
+                &::before {
+                    top: 0;
+                }
+            }
+        }
+    }
 }

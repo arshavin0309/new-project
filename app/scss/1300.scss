@@ -1,3 +1,19 @@
 @media (max-width: 1300px) {
-    
+    .main-platform {
+        &__item {
+            p {
+                height: 50px;
+            }
+        }
+
+        picture {
+            height: 420px;
+        }
+    }
+
+    .btn {
+        &--grid {
+            padding: 30px;
+        }
+    }
 }
