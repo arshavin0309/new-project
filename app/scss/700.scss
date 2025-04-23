@@ -1,12 +1,4 @@
 @media (max-width: 700px) {
-    .main-platform {
-        &__item {
-            grid-template-columns: 1fr;
-            justify-content: center;
-            text-align: center;
-        }
-    }
-
     .swiper1 {
         .swiper-slide {
             min-height: 300px;

@@ -589,6 +589,10 @@ body {
         }
     }
 
+    .btn {
+        max-width: 100%;
+    }
+
     picture {
         height: 500px;
         display: flex;
@@ -2052,6 +2056,10 @@ table {
             }
         }
     }
+}
+
+.swiper {
+    width: 100%;
 }
 
 @import '../scss/hovers';

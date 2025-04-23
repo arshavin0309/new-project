@@ -75,6 +75,21 @@ let swiperPlatform = new Swiper(".swiper-platform", {
     },
 });
 
+let swiperMainPlatform = new Swiper(".swiper-main-platform", {
+    spaceBetween: 20,
+    slidesPerView: 3,
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+
+    pagination: {
+        el: ".swiper-main-platform-pagination",
+    },
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     for (let table of document.getElementsByTagName("table")) {
         let tableOverflow = document.createElement("div");
