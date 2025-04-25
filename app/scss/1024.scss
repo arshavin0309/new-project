@@ -33,4 +33,74 @@
             }
         }
     }
+
+    .platform-device {
+        &__desktop {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        &__mobile {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+    }
+
+    .platform-personal {
+        &__box {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .main-rate {
+        &__container {
+            padding: 20px;
+        }
+    }
+
+    .instruments-strategy {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        }
+
+        &__item {
+            grid-column: initial;
+
+            &:nth-child(4) {
+                grid-column: initial;
+            }
+        }
+    }
+
+    .exclusive-news {
+        grid-template-columns: 1fr;
+    }
+
+    .about-story {
+        &__list {
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        }
+
+        &__item {
+            grid-column: initial;
+            justify-content: start;
+            text-align: left;
+
+            .h2 {
+                white-space: nowrap;
+            }
+
+            &:nth-child(4),
+            &:nth-child(5) {
+                grid-column: initial;
+            }
+        }
+    }
+
+    .main-platform {
+        &__item {
+            width: 320px;
+        }
+    }
 }

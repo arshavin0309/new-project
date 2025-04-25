@@ -13,4 +13,40 @@
             margin-right: -15px;
         }
     }
+
+    .platform-device {
+        &__desktop {
+            grid-template-columns: 1fr;
+        }
+
+        &__mobile {
+            grid-template-columns: 1fr;
+        }
+
+        picture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .btn {
+        &--grid {
+            max-width: 100%;
+        }
+    }
+
+    .analytics-tool {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .contacts {
+        .hero {
+            &::before {
+                background-position: center top 60px;
+            }
+        }
+    }
 }

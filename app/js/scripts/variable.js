@@ -59,6 +59,7 @@ if (page == '/404.html') {
     $('.hero__heading').html('It looks like the page you\'re looking for doesn\'t exist or has been moved');
     $('.hero__title').html('Oops! Page not found (404)');
     $('.hero__info').css('display', 'none');
+    $('.hero__btn').attr('href', '/');
     $('.hero__btn span').html('Return to the homepage');
     $('.error .main-form .heading .h1').css('display', 'none');
     $('.error .main-form .heading h2').html('Contact our 24/7 support team if you need assistance');

@@ -101,7 +101,7 @@
 
     .hero {
         .container {
-            min-height: auto;
+            min-height: 300px;
         }
     }
 
@@ -151,7 +151,7 @@
 
     table {
         min-width: 940px;
-        width: 940px;
+        width: 100%;
 
         th {
             padding: 30px 20px 20px;
@@ -213,6 +213,34 @@
 
         &__pagination {
             display: flex;
+        }
+    }
+
+    .main-rate {
+        &__item {
+            width: 265px;
+        }
+    }
+
+    .forecasts {
+        .hero {
+            .container {
+                padding-top: 35px;
+            }
+        }
+    }
+
+    .about {
+        .hero {
+            .container {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .about-story {
+        .container {
+            gap: 40px;
         }
     }
 }

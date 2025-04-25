@@ -24,4 +24,18 @@
             flex-direction: column;
         }
     }
+
+    .analytics-tool {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .contacts {
+        .hero {
+            &::before {
+                background-position: center top 50px;
+            }
+        }
+    }
 }

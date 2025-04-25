@@ -11,16 +11,9 @@
         }
     }
 
-    .main-form {
-        &__container {
-            padding: 20px;
-        }
-    }
-
     .banner-1 {
         &__container {
             grid-template-columns: 1fr;
-            padding: 20px;
         }
 
         picture {
@@ -37,6 +30,22 @@
                 height: 50px;
                 align-items: center;
                 padding: 20px;
+            }
+        }
+    }
+
+    .platform-personal {
+        &__box {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .main-form {
+        form {
+            input {
+                &[type=submit] {
+                    padding: 20px;
+                }
             }
         }
     }
