@@ -15,7 +15,7 @@
             position: fixed;
             inset: 76px 0 0 auto;
             width: 100%;
-            max-width: 400px;
+            max-width: 430px;
             height: calc(100% - 76px);
             flex-direction: column;
             background: var(--gradient-header);
@@ -42,12 +42,32 @@
                     }
                 }
 
+                &.active {
+                    &>a {
+                        &::after {
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
+
                 &>a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                     width: 100%;
                     padding: 20px 30px;
                     color: var(--white);
                     text-align: left;
                     border-bottom: 1px solid var(--grey-text);
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 11px;
+                        height: 6px;
+                        background: url(../images/menu-arrow.svg) center / contain no-repeat;
+                        transition: var(--transition);
+                    }
                 }
 
                 &>.sub-menu {
