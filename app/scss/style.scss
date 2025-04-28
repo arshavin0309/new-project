@@ -2093,6 +2093,24 @@ table {
     width: 100%;
 }
 
+.wpcf7-spinner {
+    position: absolute !important;
+    top: 50% !important;
+    right: 15px !important;
+}
+
+.wpcf7-not-valid-tip {
+    margin: 10px 0 0 !important;
+    color: var(--red) !important;
+}
+
+.wpcf7 form .wpcf7-response-output {
+    margin: 10px 0 0 !important;
+    padding: 10px 20px !important;
+    border-radius: 20px !important;
+    color: var(--white) !important;
+}
+
 @import '../scss/hovers';
 @import '../scss/1800';
 @import '../scss/1700';

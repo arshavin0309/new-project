@@ -5,7 +5,7 @@ if (page == '/') {
     $('.hero__btn span').html('sign up now');
 }
 
-if (page == '/platform.html') {
+if (page == '/platform.html' || page == '/platform/') {
     $('.hero__heading').html('Trading Platform');
     $('.hero__title').html('NewProject: your gateway to smart trading');
     $('.hero__info').html('The key to earning in the financial markets with instant server connection on any device — Desktop, smartphone, or tablet.');
@@ -17,7 +17,7 @@ if (page == '/platform.html') {
     $('.banner-1 .btn span').html('open an account');
 }
 
-if (page == '/terms.html') {
+if (page == '/terms.html' || page == '/terms/') {
     $('.hero__heading').html('Trading terms');
     $('.hero__title').html('Invest confidently and reach your financial goals faster with NewProject');
     $('.hero__info').css('display', 'none');
@@ -31,7 +31,7 @@ if (page == '/terms.html') {
     $('.banner-1 .btn span').html(' Start trading');
 }
 
-if (page == '/instruments.html') {
+if (page == '/instruments.html' || page == '/instruments/') {
     $('.hero__heading').html('Trading instruments');
     $('.hero__title').html('Explore NewProject\'s powerful trading instruments');
     $('.hero__info').css('display', 'none');
@@ -44,7 +44,7 @@ if (page == '/instruments.html') {
     $('.banner-1 .btn span').html('Start trading');
 }
 
-if (page == '/calendar.html') {
+if (page == '/calendar.html' || page == '/calendar/') {
     $('.hero__heading').html('Economic calendar');
     $('.hero__title').html('Stay ahead of the market with the Economic calendar');
     $('.hero__info').html('Keep track of key financial events that impact the markets with our real-time Economic calendar. Whether you\'re a day trader, investor, or market analyst, staying on top of upcoming economic releases and global financial reports is essential to making smart trading decisions.');
@@ -61,11 +61,12 @@ if (page == '/404.html') {
     $('.hero__info').css('display', 'none');
     $('.hero__btn').attr('href', '/');
     $('.hero__btn span').html('Return to the homepage');
+    
     $('.error .main-form .heading .h1').css('display', 'none');
     $('.error .main-form .heading h2').html('Contact our 24/7 support team if you need assistance');
 }
 
-if (page == '/overview.html') {
+if (page == '/overview.html' || page == '/overview/') {
     $('.hero__heading').html('Market Trends');
     $('.hero__title').html('Market overview — stay ahead with NewProject');
     $('.hero__info').html('With NewProject, you’re always up to date with key news, trends, and events shaping the global financial markets.');
@@ -76,7 +77,7 @@ if (page == '/overview.html') {
     $('.banner-1 .btn span').html('open an account');
 }
 
-if (page == '/analytics.html') {
+if (page == '/analytics.html' || page == '/analytics/') {
     $('.hero__heading').html('Market analytics');
     $('.hero__title').html('NewProject – your source of reliable market insights');
     $('.hero__info').html('Stay ahead of the market with NewProject’s objective analysis, forecasts, and key financial data. Gain the confidence to make well-informed trading decisions.');
@@ -88,17 +89,16 @@ if (page == '/analytics.html') {
     $('.banner-1 .btn span').html('start trading');
 }
 
-if (page == '/news.html') {
+if (page == '/news.html' || page == '/news/') {
     $('.hero__heading').html('Market news');
     $('.hero__title').html('Get Real-Time Market Updates');
     $('.hero__info').html('Stay informed about the latest financial trends and breaking news to make well-founded trading decisions. Keep a competitive edge with up-to-date market insights.');
     $('.hero__btn span').html('Start Trading');
     $('.banner-1 h2').html('reach your maximum potential with NewProject');
     $('.banner-1 h2 + p').html('NewProject – your analytics, your strategy, your success. Start trading with confidence today!');
-
 }
 
-if (page == '/forecasts.html') {
+if (page == '/forecasts.html' || page == '/forecasts/') {
     $('.hero__heading').html('Market forecasts');
     $('.hero__title').html('Find the best trading opportunities');
     $('.hero__info').html('Stay ahead of the game with regular updates on currency markets, commodities and other assets.');
@@ -107,7 +107,7 @@ if (page == '/forecasts.html') {
     $('.banner-1 h2 + p').html('Your strategy, your success—gain the insights you need to stay ahead!');
 }
 
-if (page == '/about.html') {
+if (page == '/about.html' || page == '/about/') {
     $('.hero__heading').html('About NewProject');
     $('.hero__title').html('Your Trusted Trading Partner');
     $('.hero__info').css('display', 'none');
@@ -119,7 +119,7 @@ if (page == '/about.html') {
     $('.banner-1 .btn span').html('START TRADING TODAY');
 }
 
-if (page == '/contacts.html') {
+if (page == '/contacts.html' || page == '/contacts/') {
     $('.hero__heading').html('Contact us');
     $('.hero__title').html('Get in touch with NewProject');
     $('.hero__info').css('display', 'none');
